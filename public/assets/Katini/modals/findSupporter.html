@@ -1,0 +1,41 @@
+<div class="modal fade" id="findSupporterModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">
+                    <?= bi('search'); ?> Supporter vinden
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="findSupporterQuery" class="form-control mb-3" placeholder="Begin met typen" />
+
+                <p id="resultMessage"></p>
+
+                <div id="resultsRow" class="mt-3 mb-3">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div><!--/modal-content-->
+    </div>
+</div><!--/modal-->
+
+<script id="resultsTemplate" type="text/x-handlebars-template">
+    {{#each results}}
+        <div class="row d-flex mb-3">
+            <div class="col flex-grow-1">
+                {{display_name}}
+                {{#if address_city}}
+                    <?= bi('dot'); ?> {{address_city}}
+                {{/if}}
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary btn-sm btn-select-supporter" data-supporter-id="{{id}}" data-supporter-display-name="{{display_name}}"" title="Supporter selecteren">
+                    <i class="bi bi-check"></i>
+                </button>
+            </div>
+        </div><!--/row-->
+    {{/each}}
+</script>

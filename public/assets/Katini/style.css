@@ -1,0 +1,58 @@
+/*
+    Katini
+    Custom Style Sheet
+*/
+
+
+/**
+ Sidebar
+**/
+
+.sidebar-content a{
+    color: #000;
+    text-decoration: none;
+}
+
+.sidebar-content a:hover{
+    font-weight: bold;
+}
+
+.sidebar-main{
+    padding: 0.5rem;
+    position: relative;
+}
+
+.sidebar-main.active{
+    background-color: rgb(149, 165, 166);
+}
+
+.sidebar-sub{
+    list-style: none;
+    padding: 0;
+}
+
+    .sidebar-sub li{
+        position: relative;
+        padding: 0.5rem;   
+        padding-left: 2rem;
+    }
+
+    .sidebar-sub li.active{
+        background: rgba(149, 165, 166, 0.4);
+    }
+
+/**
+ Display
+**/
+.display label{
+    display: block;
+    color: rgba(33, 37, 41, 0.75); /*text-muted*/
+}
+
+.display span{
+    font-size: 130%;
+}
+
+.display span small{
+    font-size: 70%;
+}
